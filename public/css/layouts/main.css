@@ -1,0 +1,29 @@
+h3 {
+    text-align: center;
+}
+
+.card {
+    margin: 100px 200px;
+    background: rgb(250, 250, 250, .4);
+    text-align: center;
+}
+
+.card-action {
+    padding-top: -50px;
+    height: 110px;
+}
+
+[type="radio"]:checked+span:after,
+[type="radio"].with-gap:checked+span:before,
+[type="radio"].with-gap:checked+span:after {
+    border: 2px solid #ef5350;
+}
+
+[type="radio"]:checked+span:after,
+[type="radio"].with-gap:checked+span:after {
+    background-color: #ef5350;
+}
+
+a {
+    color: white;
+}

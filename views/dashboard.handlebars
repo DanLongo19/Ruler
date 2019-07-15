@@ -1,0 +1,54 @@
+<link rel='stylesheet' href='/css/dashboard.css'>
+<main><div class="container"><h3>{{ name }}'s Dashboard</h3>
+<a class="waves-effect waves-light btn-small deep-orange lighten-2" href="/api/logout">Log out</a>
+
+    {{#if isTeacher}}
+    
+    <div>
+    
+    <h1>Students</h1>
+    </div>
+
+    <ul>
+        {{#each students}}
+        
+        <table>
+            <tr>
+        <li>
+            <td><p>{{ student_name }}</p>
+            {{#each this.comments}}
+            <h6><span>{{this.date}}</span> {{this.comment}}</h6></td>
+            {{/each}}
+        </li> <br>
+        {{/each}}
+        </tr>
+        </table>
+        <a class="dashLinkColor waves-effect waves-light btn-small deep-orange lighten-2" href="/addComment?teacher_id={{ teacher_id }}">Add Comment</a>
+        <a class="dashLinkColor waves-effect waves-light btn-small deep-orange lighten-2" href="/addStudent?teacher_id={{ teacher_id }}">Add New Student</a>
+    </ul>
+    {{else}}
+    <div>
+    <h1>Your Students</h1>
+    </div>
+    <ul>
+        {{#each students}}
+        <table>
+            <tr>
+        <li>
+            <td><p>{{ student_name }}</p>
+            {{#each this.comments}}
+            <h6><span>{{this.date}}</span> {{this.comment}}</h6></td>
+            {{/each}}
+        </li> <br>
+        {{/each}}
+        </tr>
+        </table>
+    </ul>
+    {{/if}}
+
+
+</div>
+</main>
+<footer>
+<img class="responsive-img" src="/../images/dreamstime_four.jpg" width="1800px">
+</footer>

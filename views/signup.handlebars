@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="row login">
+        <div class="col s12 m6 offset-m3">
+
+            <form class="signup" action="/api/signup" method="post">
+                <div class="card">
+                    <div class="card-action deep-orange lighten-2 white-text">
+                        <h4>Please sign up</h4>
+                    </div>
+                    <div class="card-content">
+                        {{#if isTeacher}}
+                        {{!-- this tells our post route that user is a TEACHER --}}
+                        <input id="occupation" name="occupation" type="hidden" value="TEACHER">
+                        <div class="form-field">
+                            <label for="user_name" class="black-text">Name</label>
+                            <input type="text" id="user_name" name="user_name">
+                        </div> <br>
+                        {{else}}
+                        {{!-- this tells our post route that user is a PARENT and associates it with an existing parent --}}
+                        <input id="occupation" name="occupation" type="hidden" value="PARENT">
+                        <div class="form-field">
+                            <label for="parent_id" class="black-text">Name </label>
+                            <select id="parent_id" class="browser-default" name="parent_id">
+                                <option value="" disabled selected>Select Parent</option>
+                                {{#each parents}}
+                                <option value="{{this.id}}">{{this.parent_name}}</option>
+                                {{/each}}
+                            </select>
+                        </div><br>
+                        {{/if}}
+                        <div class="form-field">
+                            <label for="email" class="black-text">Email </label>
+                            <input type="text" id="email" name="email">
+                        </div> <br>
+
+                        <div class="form-field">
+                            <label for="password" class="black-text"> Password </label>
+                            <input type="password" id="password" name="password">
+                        </div> <br>
+                        <div class="form-field center-align">
+                            <button type="submit" class="btn btn-default">Signup</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <br />
+            <p>Or log in <a href="/login">here</a></p>
+        </div>
+    </div>
+</div>

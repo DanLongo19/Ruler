@@ -1,0 +1,49 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="/css/addComment.css" rel="stylesheet">
+<div class="container">
+    <div class="card">
+        <div class="card-action deep-orange lighten-2 white-text">
+            <h2>Review Your Student:</h2>
+        </div>
+        <br>
+        <div class="form-group center-align">
+
+            <form id="student-form" action="/api/addComment" method="post">
+                <input id="teacher_id" name="teacher_id" type="hidden" value="{{ teacher_id }}">
+                <div class="row">
+                    <div class="input-field col s4">
+                        <label for="student"></label>
+                        <select id="student" name="student_id" class="browser-default">
+                            <option value="" disabled selected> Choose Student</option>
+                            {{#each students}}
+                            <option value="{{this.id}}">{{this.student_name}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s8">
+                        <i class="material-icons prefix">mode_edit</i>
+                        <label for="comment"></label>
+                        <textarea placeholder="Type your comments here" rows="10" id="comment" name="comment"></textarea>
+                    </div>
+                </div>
+
+                <br />
+                <div class="form-field center-align">
+                    <button type="submit" button class="btn-large deep-orange lighten-2 hoverable">Add Comments</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('select').formSelect();
+    });
+    $('#textarea1').val('New Text');
+    M.textareaAutoResize($('#textarea1'));
+</script>
+{{!-- <script type="text/javascript" src="/js/addComment.js"></script> --}}

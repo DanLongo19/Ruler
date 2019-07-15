@@ -1,0 +1,17 @@
+body {
+    background-image: url(/images/color-pencils-left.jpg);
+    background-size: cover;
+}
+
+
+.fc-unthemed .fc-today {
+    background-color: #ff8a65;
+  }
+
+  .fc-bg .fc-state-highlight{ 
+      background: rgba(202, 54, 9, 0.20) !important; 
+    }
+
+    a {
+      color: brown;
+    }

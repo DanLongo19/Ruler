@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.min.css'>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.min.js'></script>
+    <link href="/css/layouts/main.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url(images/color-pencils-left.jpg);
+            background-size: cover;
+        }
+
+        .grid {
+            background: rgb(250, 250, 250, .8);
+
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper deep-orange lighten-2">
+                <a href="#" class="brand-logo right"><img src="/images/ruler.png" width="75" height="64"></a>
+                <ul id="nav-mobile" class="left hide-on-med-and-down">
+                    <li><a href="/calendar">Calendar</a></li>
+                    <li><a href="/dashboard">Dashboard</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    {{{ body }}}
+
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<a href="#" class="brand-logo right"><img src="images/ruler.png" width="100" height="64"></a>
+<div class="container">
+    <div class="row login">
+        <div class="col s12 m6 offset-m3">
+
+            <form class="login" action="/api/login" method="post">
+                <div class="card">
+                    <div class="card-action deep-orange lighten-2 white-text">
+                        <h4>Log In with Email & Password</h4>
+                    </div>
+                    <div class="card-content">
+                        <div class="form-field">
+                            <label for="username" class="black-text">Email </label>
+                            <input type="text" id="username" name="email">
+                        </div> <br>
+
+                        <div class="form-field">
+                            <label for="password" class="black-text"> Password </label>
+                            <input type="password" id="password" name="password">
+                        </div> <br>
+                        <div class="form-field center-align">
+                            <button type="submit" class="btn btn-default">Log In</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <br />
+            <p>Don't have an account? Sign up <a href="/signup?occupation=TEACHER">AS A TEACHER</a></p>
+            <p>Sign up <a href="/signup?occupation=PARENT">AS A PARENT</a></p>
+
+        </div>
+    </div>
+</div>
